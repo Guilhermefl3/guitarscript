@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8"/>
+  </head>
+  	<script>
+	document.getElementById("nameInput")
+    window.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        clicked();
+    }
+});
+	</script>
+</head>
+
+  <body>
+    <div id="tit2">
+      <img id="imgLogo" src="https://i.imgur.com/O17Rhhb.jpg" alt="Logo" onclick="hideall()">
+      <div id="shown">
+      <p id="logoText">Descomplica Digital</p>
+    	<input id="nameInput" onfocus="this.value=''">
+        <select id="jobOpt"></select>
+  		<button class="eft" id="butAdd" onclick="clicked(this)">Add</button>
+  	<div id="canvasDiv">
+      <div id="canvasOut">
+     	 <table id="tableContent">
+
+  	<tbody><tr class="black">
+    <th>Nome</th>
+    <th>Serviço</th>
+    <th>Chegada</th>
+    <th>Atendimento</th>
+    <th class="adm">TE</th>
+    <th>Status</th>
+    <th class="adm">TA</th>
+    <th></th>
+  </tr>
+				</tbody></table>
+      </div>
+  	</div>
+  </div>
+</div>
+				<button class="min" id="min" onclick="logs()" clickout="logs()">Serviços</button>
+  	    <div id="tit3">
+
+      </div>
+    <script src="jobs.json" id="jsontable"></script>
+    <script src="tables.js" id="canvas"></script>
+    
+</body>
+	<div class="admView">
+	<table class="admView" id="admTb">
+    <tr>
+      <th>TME</th>
+      <th>TMA</th>
+      <th>Total de Serviços</th>
+    </tr>
+    <tr>
+      <th>00:00</th>
+      <th>00:00</th>
+      <th>0</th>
+    </tr>
+  </table>
+    <div class="scroll">
+  <table class="admView" id="totalJobs">
+    <tr>
+      <th>Serviços</th>
+      <th>Atendimentos</th>
+		 </tr>
+				</table>
+    	</div>
+	</div>
+    
+	
+</html>
